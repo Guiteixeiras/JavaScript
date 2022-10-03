@@ -9,20 +9,48 @@
 </head>
 
 <body>
-  <h1>Sistema de mutas</h1>
+<h1>Sistema de mutas</h1>
   Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h 
   <input type="button" value="verificar" onclick="calcular()">
   <div id="ala">
   </div>
- <script>
+  <script>
       function calcular() {
           var txtv = document.querySelector('input#txtvel')
-          var ala = document.querySelector('div#res')
+          var ala = document.querySelector('div#ala')
           var vel = Number(txtv.value)
-          res.innerHTML = `<p>sua velocidade atual é de <strong>${vel}km/h</strong></p>`
+          ala.innerHTML =`<p>você esta agora a <strong>${vel}km/h</strong> boa viajem</p>`
+          if (vel >=70){
+            ala.innerHTML =`<p>você ja esta a <strong>${vel}km/h</strong>, lembre do <strong>cinto de segurança</strong></p>`
+          }
+          if (vel >=100){
+            ala.innerHTML = `<p>você foi <strong>MULTADO</strong> pelo excesso de velocidade, sendo ela de <strong>${vel}km/h</strong></p>`
+          }
       }
   </script>
+
+<h1>Sistema de Nacionalidade</h1>
+
+Pais de Origem: <input type="text" name="naci" id="text"> 
+<input type="button" value="verificar" onclick="falar()">
+<div id="oia">
+</div>
+  <script>
+    function falar(){
+      var text = document.querySelector('input#text')
+      var oia = document.querySelector('div#oia')
+      var info = String(text.value)
+      oia.innerHTML =`você veio de ${info}`
+        if (info == 'Brasil'){
+          oia.innerHTML = `você é Brasilero`
+        }else{
+          oia.innerHTML = `você é Estrangeiro`
+        }
+
+    }
+  </script>
+
+
+
 </body>
-
-
 </html>
