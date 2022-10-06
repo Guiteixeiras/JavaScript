@@ -2,6 +2,7 @@ const turnOn = document.getElementById ( 'turnOn' );
 const turnOff = document.getElementById ( 'turnOff' );
 const lamp = document.getElementById ( 'lamp' );
 
+//salvar a lampada para não regenerar 
 function isLampBroken() {
     return lamp.src.indexOf ('quebrada') > -1
 }
