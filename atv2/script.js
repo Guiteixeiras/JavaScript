@@ -1,5 +1,5 @@
 function verificar() {
-    //window.alert('funciona')
+    //window.alert('funciona')  apenas um texte
     
     var data = new Date()
     var ano = data.getFullYear()
